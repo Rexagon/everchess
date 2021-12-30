@@ -1,0 +1,85 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "move",
+			"inputs": [
+				{"name":"from","type":"uint6"},
+				{"name":"to","type":"uint6"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "white_bid",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"white_bid","type":"uint64"}
+			]
+		},
+		{
+			"name": "black_bid",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"black_bid","type":"uint64"}
+			]
+		},
+		{
+			"name": "figures",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"color","type":"uint8"}],"name":"figures","type":"map(uint6,tuple)"}
+			]
+		},
+		{
+			"name": "winner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"winner","type":"optional(uint8)"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"game_index","type":"uint32"},
+		{"key":2,"name":"white_player","type":"address"},
+		{"key":3,"name":"black_player","type":"address"}
+	],
+	"events": [
+		{
+			"name": "PlayerMove",
+			"inputs": [
+				{"name":"color","type":"uint8"},
+				{"name":"from","type":"uint16"},
+				{"name":"to","type":"uint16"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"game_index","type":"uint32"},
+		{"name":"white_player","type":"address"},
+		{"name":"black_player","type":"address"},
+		{"name":"white_bid","type":"uint64"},
+		{"name":"black_bid","type":"uint64"},
+		{"components":[{"name":"color","type":"uint8"}],"name":"figures","type":"map(uint6,tuple)"},
+		{"name":"current_color","type":"uint8"},
+		{"name":"winner","type":"optional(uint8)"}
+	]
+}
